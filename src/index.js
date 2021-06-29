@@ -6,6 +6,7 @@ const session = require('express-session');
 
 //Inicializations
 const app = express();
+
 require('./database');
 
 
@@ -31,28 +32,10 @@ app.use(session({
 }));
 
 // Global Variables
-(function () {
-    'use strict'
-  
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.querySelectorAll('.needs-validation')
-  
-    // Loop over them and prevent submission
-    Array.prototype.slice.call(forms)
-      .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-          if (!form.checkValidity()) {
-            event.preventDefault()
-            event.stopPropagation()
-          }
-  
-          form.classList.add('was-validated')
-        }, false)
-      })
-  })()
+
 // Routes
 app.use(require('./routes/index'));
-app.use(require('./routes/notes'));
+app.use(require('./routes/products'));
 app.use(require('./routes/users'));
 
 // Static Files
@@ -60,5 +43,5 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Server is listening
 app.listen(app.get('port'), () => {
-    console.log('Server on port ', app.get('port'));
+    console.log('Server listening on port ', app.get('port'));
 });

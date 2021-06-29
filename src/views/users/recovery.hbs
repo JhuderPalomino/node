@@ -1,32 +1,24 @@
-<form class="container p-4">
-  <div class="col-12">
-    <label class="visually-hidden" for="inlineFormInputGroupUsername">Username</label>
-    <div class="input-group">
-      <div class="input-group-text">@</div>
-      <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+<div class="row">
+    <div class="col-md-5 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                <h1 class="text-center">Password Recovery</h1>
+                <p class="signup-link recovery">Enter your email and instructions will sent to you!</p>
+                <form action="" method="post" name="login">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
+                            placeholder="Enter email">
+                    </div>
+                  
+                    
+
+                    <div class="d-grid gap-2 mb-3">
+                        <button type="submit" class=" btn btn-block mybtn btn-primary tx-tfm">Reset</button>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-
- {{!--  <div class="col-12">
-    <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
-    <select class="form-select" id="inlineFormSelectPref">
-      <option selected>Choose...</option>
-      <option value="1">One</option>
-      <option value="2">Two</option>
-      <option value="3">Three</option>
-    </select>
-  </div> --}}
-
-  <div class="col-12">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="inlineFormCheck">
-      <label class="form-check-label" for="inlineFormCheck">
-        Remember me
-      </label>
-    </div>
-  </div>
-
-  <div class="col-12">
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </div>
-</form>
+</div>
