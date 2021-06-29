@@ -1,0 +1,43 @@
+
+<div class="row" >
+   
+        <div class=" text-center mb-3">
+            <a id="btn-add-notes" href="../notes/add" style="background-color: #14d685;" class="btn">Add Notes</a>
+        </div>
+    
+                
+    {{#each notesDB}}
+      <div class="col-md-4 mb-3" >
+          <div class="card">
+            <div class="card-header">
+                <h4 class="card-title" >
+                    {{title}}
+                </h4>
+                
+            </div>
+            <div class="card-body">
+                
+                <p>
+                    {{description}}
+                </p>
+                <p>
+                    {{date}}
+                </p>
+            </div>
+            <div class=" text-center mb-3">
+                <a id="btn-delete-notes"  style="background-color: #da4646;" class="btn ">Delete</a>
+                <a id="btn-delete-notes"  style="background-color: #46a4da;" class="btn ">Edit</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    {{/each}}
+    
+  
+</div>
+        
+          
+    
+ 

@@ -1,0 +1,38 @@
+{{#each errors}}
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{text}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+{{/each}}
+
+<div class="row">
+
+    <div class="col-md-5 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <h4>New Note</h4>
+        </div>
+        <div class="card-body">
+
+            <form action="/notes/new-note" method="POST">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label >Title</label>
+                        <input type="text" id="n-title" name="title" class="form-control" maxlength="25" placeholder="Title">
+                    </div>
+                    <div class="col-md-12 mb-3">
+                        <label >Description</label>
+                        <textarea id="n-description" name="description" class="form-control" maxlength="60" placeholder="Description"
+                            rows="3"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn" style="background-color: #da4646;"> Discard</button> 
+                        <button class="btn" style="background-color: #57da46;">Save</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+</div>
