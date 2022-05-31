@@ -35,7 +35,7 @@ app.use(session({
 
 // Routes
 app.use(require('./routes/index'));
-app.use(require('./routes/products'));
+app.use(require('./routes/notes'));
 app.use(require('./routes/users'));
 
 // Static Files

@@ -12,9 +12,9 @@ router.get('/users/recovery', (req, res) => {
     res.render('users/recovery');
 });
 
-/* router.get('/prueba', (req, res) => {
+router.get('/prueba', (req, res) => {
     res.render('users/prueba');
-}); */
+});
 
 
 //pages
